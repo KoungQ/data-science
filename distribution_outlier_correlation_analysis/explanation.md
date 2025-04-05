@@ -1,6 +1,6 @@
 # Data Exploration Report
 
-## Author: [Your Name]
+## Author: 202135508 김경규
 ## Assignment 3
 
 ---
