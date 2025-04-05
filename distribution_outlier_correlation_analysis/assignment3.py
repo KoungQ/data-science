@@ -1,9 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# ---------------------
-# 데이터 생성
-# ---------------------
 np.random.seed(42)
 n = 200
 
@@ -12,13 +9,9 @@ income = np.random.normal(loc=50000, scale=15000, size=n)
 purchase_amount = np.random.exponential(scale=300, size=n)
 purchase_count = np.random.poisson(lam=3, size=n)
 
-# 이상치 삽입
 income[5] = 250000
 purchase_amount[10] = 5000
 
-# ---------------------
-# Part 1: Histogram (분포 분석)
-# ---------------------
 def plot_histogram(data, title, xlabel):
     plt.figure(figsize=(8, 4))
     plt.hist(data, bins=20, color='skyblue', edgecolor='black')
@@ -34,9 +27,6 @@ plot_histogram(age, 'Age', 'Age')
 plot_histogram(income, 'Income', 'Income')
 plot_histogram(purchase_amount, 'Purchase Amount', 'Purchase Amount')
 
-# ---------------------
-# Part 2: Box Plot (이상치 탐지)
-# ---------------------
 def plot_boxplot(data, title, ylabel):
     plt.figure(figsize=(8, 2))
     plt.boxplot(data, vert=False, patch_artist=True,
@@ -51,9 +41,6 @@ def plot_boxplot(data, title, ylabel):
 plot_boxplot(income, 'Income', 'Income')
 plot_boxplot(purchase_amount, 'Purchase Amount', 'Purchase Amount')
 
-# ---------------------
-# Part 3: Scatter Plot (변수 관계)
-# ---------------------
 def plot_scatter(x, y, xlabel, ylabel, title):
     plt.figure(figsize=(6, 4))
     plt.scatter(x, y, color='tomato', alpha=0.7, edgecolor='black')
