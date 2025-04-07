@@ -8,48 +8,47 @@
 ## Part 1: Distribution Analysis (Histogram)
 
 ### 1. Age
-- **분포 형태**: 대체로 정규분포 형태이며 평균값을 중심으로 좌우 대칭.
-- **이상치 여부**: 명확한 이상치는 보이지 않음.
+- **Distribution Shape**: Generally resembles a normal distribution, symmetric around the mean.
+- **Outliers**: No clear outliers observed.
 
 ### 2. Income
-- **분포 형태**: 대부분은 평균 근처에 분포하지만, **오른쪽으로 꼬리가 긴 오른쪽 편향(right-skewed)** 형태.
-- **이상치 여부**: 하나의 극단적인 고소득자 (250,000)가 있음 → 이상치로 판단됨.
+- **Distribution Shape**: Mostly centered around the average, but shows a **right-skewed** distribution with a long tail on the right.
+- **Outliers**: One extreme high-income value (250,000) is present → considered an outlier.
 
 ### 3. Purchase Amount
-- **분포 형태**: 전형적인 **지수 분포(exponential distribution)** 형태, 많은 값이 낮은 구간에 몰려 있음.
-- **이상치 여부**: 매우 큰 값 (5,000)이 하나 존재 → 이상치.
+- **Distribution Shape**: Typical **exponential distribution** pattern with many values concentrated in the lower range.
+- **Outliers**: One very large value (5,000) is present → considered an outlier.
 
 ---
 
 ## Part 2: Outlier Detection (Boxplot)
 
 ### 1. Income
-- **이상치**: 박스플롯 상에서 오른쪽에 **명확한 이상치** 하나가 튀어나와 있음.
-- **설명**: 이 값은 앞서 본 250,000으로, 일반적인 소득 수준을 훨씬 초과함.
+- **Outliers**: A clear outlier appears on the right side of the boxplot.
+- **Explanation**: This value corresponds to the previously mentioned 250,000, which greatly exceeds the typical income level.
 
 ### 2. Purchase Amount
-- **이상치**: 이상치가 여러 개 존재하며 전체적으로 분포가 비대칭.
-- **설명**: 일반적인 구매 금액보다 과도하게 높은 값들이 존재함.
+- **Outliers**: Several outliers are present, and the overall distribution is skewed.
+- **Explanation**: There are values significantly higher than the typical purchase amount.
 
 ---
 
 ## Part 3: Variable Relationships (Scatterplot)
 
 ### 1. Age vs Purchase Amount
-- **관계**: 뚜렷한 상관관계 없음.
-- **관찰**: 모든 연령대에서 다양한 구매 금액이 나타남. 클러스터나 추세는 보이지 않음.
+- **Relationship**: No clear correlation observed.
+- **Observation**: A wide range of purchase amounts across all age groups. No visible clusters or trends.
 
 ### 2. Income vs Purchase Amount
-- **관계**: 약한 양의 상관관계가 있을 수 있으나, 명확하진 않음.
-- **관찰**: 고소득자 한 명이 매우 큰 구매 금액을 보여 이상치로 판단 가능.
+- **Relationship**: Possibly a weak positive correlation, but not definitive.
+- **Observation**: One high-income individual shows a very large purchase amount, considered an outlier.
 
 ---
 
-## 결론 요약
+## Summary Conclusion
 
-- **데이터의 분포**는 나름 정규성 또는 지수성을 보이고 있으나, 일부 변수는 극단적인 이상치를 포함하고 있음.
-- **이상치**는 데이터 분석 및 모델링 시 반드시 사전 처리 필요.
-- **변수 간 관계**는 제한적이며, 단순한 선형 회귀로 설명되기는 어려움.
+- **Data distributions** show general normality or exponential trends, but some variables include extreme outliers.
+- **Outliers** should be handled prior to data analysis or modeling.
+- **Relationships between variables** are limited and not easily explained by simple linear regression.
 
 ---
-
